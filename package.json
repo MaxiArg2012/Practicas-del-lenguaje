@@ -1,0 +1,24 @@
+{
+  "name": "practicas-del-lenguaje",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+  "start": "electron ."
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxiArg2012/Practicas-del-lenguaje.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MaxiArg2012/Practicas-del-lenguaje/issues"
+  },
+  "homepage": "https://github.com/MaxiArg2012/Practicas-del-lenguaje#readme",
+  "devDependencies": {
+    "electron": "^42.4.0"
+  }
+}
