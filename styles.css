@@ -92,3 +92,171 @@ footer {
   color: #64748b;
   padding: 24px;
 }
+
+.timeline {
+  margin-top: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.timeline-item {
+  border-left: 5px solid #0f5132;
+  padding: 18px 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.timeline-item h3 {
+  margin: 0 0 10px;
+  color: #0f5132;
+}
+
+.timeline-item p {
+  line-height: 1.6;
+}
+
+.tactics-timeline {
+  margin-top: 28px;
+  display: grid;
+  gap: 28px;
+}
+
+.tactics-period {
+  border-top: 4px solid #0f5132;
+  padding-top: 20px;
+}
+
+.tactics-period h3 {
+  margin: 0 0 18px;
+  font-size: 28px;
+  color: #0f5132;
+  text-align: center;
+}
+
+.tactics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tactic-card {
+  background: #f8fafc;
+  border: 1px solid #d9e2ec;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.tactic-card h4 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #1f2933;
+}
+
+.tactic-summary {
+  font-weight: bold;
+  color: #0f5132;
+  margin-bottom: 14px;
+}
+
+.tactic-card ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.tactic-card p {
+  line-height: 1.55;
+}
+
+@media (max-width: 800px) {
+  .tactics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carousel-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.tactics-carousel {
+  overflow: hidden;
+}
+
+.carousel-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #0f5132;
+  color: white;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button:hover {
+  background: #146c43;
+}
+
+.carousel-status {
+  text-align: center;
+  margin-top: 16px;
+  color: #64748b;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .carousel-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-button {
+    margin: 0 auto;
+  }
+}
+
+.tactics-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.tactics-carousel-inner {
+  display: flex;
+  transition: transform 0.45s ease-in-out;
+  width: 100%;
+}
+
+.tactics-carousel .tactics-period {
+  min-width: 100%;
+  display: block;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.carousel-dot.active {
+  background: #0f5132;
+  transform: scale(1.45);
+}
