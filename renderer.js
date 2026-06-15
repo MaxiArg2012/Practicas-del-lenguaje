@@ -83,3 +83,70 @@ nextTacticsButton.addEventListener('click', () => {
 });
 
 updateTacticsCarousel();
+
+const interviewsCarousel = document.querySelector('.interviews-carousel');
+const interviewSlides = document.querySelectorAll('.interviews-carousel .interview-slide');
+const prevInterviewsButton = document.getElementById('interviews-prev');
+const nextInterviewsButton = document.getElementById('interviews-next');
+const interviewsDotsContainer = document.getElementById('interviews-dots');
+
+const interviewsCarouselInner = document.createElement('div');
+interviewsCarouselInner.classList.add('interviews-carousel-inner');
+
+interviewSlides.forEach((slide) => {
+  interviewsCarouselInner.appendChild(slide);
+});
+
+interviewsCarousel.appendChild(interviewsCarouselInner);
+
+let currentInterviewSlide = 0;
+
+function updateInterviewsCarousel() {
+  interviewsCarouselInner.style.transform = `translateX(-${currentInterviewSlide * 100}%)`;
+
+  const dots = interviewsDotsContainer.querySelectorAll('.carousel-dot');
+
+  dots.forEach((dot, index) => {
+    if (index === currentInterviewSlide) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+}
+
+interviewSlides.forEach((slide, index) => {
+  const dot = document.createElement('button');
+  dot.classList.add('carousel-dot');
+  dot.setAttribute('aria-label', `Ver entrevista ${index + 1}`);
+
+  dot.addEventListener('click', () => {
+    currentInterviewSlide = index;
+    updateInterviewsCarousel();
+  });
+
+  interviewsDotsContainer.appendChild(dot);
+});
+
+prevInterviewsButton.addEventListener('click', () => {
+  currentInterviewSlide -= 1;
+
+  if (currentInterviewSlide < 0) {
+    currentInterviewSlide = interviewSlides.length - 1;
+  }
+
+  updateInterviewsCarousel();
+});
+
+nextInterviewsButton.addEventListener('click', () => {
+  currentInterviewSlide += 1;
+
+  if (currentInterviewSlide >= interviewSlides.length) {
+    currentInterviewSlide = 0;
+  }
+
+  updateInterviewsCarousel();
+});
+
+updateInterviewsCarousel();
+
