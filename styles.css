@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+.app-header {
+  background: #0f5132;
+  color: white;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: 36px;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.main-nav button {
+  border: none;
+  background: #e5e7eb;
+  color: #1f2933;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.main-nav button:hover {
+  background: #cbd5e1;
+}
+
+.main-nav button.active {
+  background: #0f5132;
+  color: white;
+}
+
+main {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+.content-section {
+  display: none;
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+.content-section.active {
+  display: block;
+}
+
+.content-section h2 {
+  margin-top: 0;
+  color: #0f5132;
+}
+
+.video-placeholder {
+  margin-top: 20px;
+  padding: 32px;
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+  text-align: center;
+  color: #64748b;
+  background: #f8fafc;
+}
+
+footer {
+  text-align: center;
+  color: #64748b;
+  padding: 24px;
+}

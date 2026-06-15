@@ -2,10 +2,67 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Prácticas del Lenguaje</title>
+  <title>Prácticas del Lenguaje - Evolución del fútbol</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Prácticas del Lenguaje</h1>
-  <p>Aplicación inicial funcionando con Electron.</p>
+  <header class="app-header">
+    <h1>Prácticas del Lenguaje</h1>
+    <p>Evolución de la regla de fuera de juego y las tácticas en el fútbol</p>
+  </header>
+
+  <nav class="main-nav">
+    <button data-section="inicio" class="active">Inicio</button>
+    <button data-section="historia">Historia</button>
+    <button data-section="tacticas">Tácticas</button>
+    <button data-section="entrevistas">Entrevistas</button>
+  </nav>
+
+  <main>
+    <section id="inicio" class="content-section active">
+      <h2>Inicio</h2>
+      <p>
+        Esta aplicación presenta un recorrido informativo sobre la evolución de la regla
+        de fuera de juego y su relación con los cambios tácticos del fútbol.
+      </p>
+      <p>
+        El objetivo es explicar cómo una regla puede modificar la forma de jugar,
+        organizar equipos y pensar estrategias dentro de la cancha.
+      </p>
+    </section>
+
+    <section id="historia" class="content-section">
+      <h2>Historia del fuera de juego</h2>
+      <p>
+        En esta sección se explicará cómo fue cambiando la regla de fuera de juego
+        desde los primeros reglamentos hasta el fútbol moderno.
+      </p>
+    </section>
+
+    <section id="tacticas" class="content-section">
+      <h2>Evolución táctica</h2>
+      <p>
+        En esta sección se mostrará cómo los cambios en la regla influyeron en las
+        formaciones, la defensa, el ataque y la manera de ocupar los espacios.
+      </p>
+    </section>
+
+    <section id="entrevistas" class="content-section">
+      <h2>Entrevistas</h2>
+      <p>
+        En esta sección se incorporarán entrevistas en video alojadas en YouTube.
+      </p>
+
+      <div class="video-placeholder">
+        Próximamente: entrevistas en video.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Trabajo práctico - Prácticas del Lenguaje</p>
+  </footer>
+
+  <script src="renderer.js"></script>
 </body>
 </html>
